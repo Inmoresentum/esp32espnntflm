@@ -1,0 +1,53 @@
+{
+  "name": "TBA",
+  "version": "0.0.0",
+  "description": "TBA",
+  "keywords": "esp32, tensorflow, tflite-micro, machine-learning, esp-nn, tensorflow-arduino, arduino tensorflow",
+  "repository": {
+    "type": "git",
+    "url": "TBA"
+  },
+  "authors": [
+    {
+      "name": "ATHAR NOOR MOHAMMAD RAFEE",
+      "email": "inmoresentum@inmoresentum.net",
+      "maintainer": true
+    }
+  ],
+  "license": "TBA",
+  "frameworks": "arduino",
+  "platforms": "espressif32",
+  "build": {
+    "flags": [
+      "-DTF_LITE_STATIC_MEMORY",
+      "-DTF_LITE_DISABLE_X86_NEON",
+      "-DESP_NN",
+      "-O2",
+      "-Wno-unused-function",
+      "-Wno-unused-parameter",
+      "-Wno-sign-compare",
+      "-Wno-strict-aliasing",
+      "-std=gnu++14",
+      "-fno-rtti",
+      "-fno-exceptions",
+      "-fno-threadsafe-statics"
+    ],
+    "srcDir": "src",
+    "includeDir": "include",
+    "srcFilter": [
+      "+<*>",
+      "+<tensorflow/**>",
+      "+<signal/**>",
+      "+<esp_nn/**>"
+    ]
+  },
+  "export": {
+    "exclude": [
+      ".git",
+      ".github",
+      "docs",
+      "test",
+      "examples"
+    ]
+  }
+}
